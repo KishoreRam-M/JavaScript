@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius-To-Fahrenheit</title>
+
+    <style>
+        body {
+            background-color: #ecec75;
+        }
+        .container {
+            background-color: black;
+            color: antiquewhite;
+            width: 700px;
+            height: 700px;
+            position: relative;
+            top: 100px;
+            left: 600px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .inputdiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            width: 200px;
+            height: 40px;
+            background-color: #ecec75;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #uinput {
+            height: 35px;
+            width: 300px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        #result {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Celcius-To-Fahrenheit Converter</h1>
+        <div class="inputdiv">
+            <input type="text" placeholder="Enter the Celcius value" id="uinput">
+            <button id="ubutton">Convert to Fahrenheit</button>
+        </div>
+<div id="result"></div>    </div>
+
+    <script>
+      document.getElementById("ubutton").addEventListener("click",fun);
+function fun()
+{
+    const input=document.getElementById("uinput").value;
+    if(isNaN(input))
+{
+    const inches="Invalid input Kindly Check My input"
+    document.getElementById("result").innerHTML=inches;
+}
+else
+{
+    const inches= ( (Number(input))*9/5)+32
+    document.getElementById("result").innerHTML=inches +"F";
+}
+    
+
+
+}
+
+
+    </script>
+    
+</body>
+</html>
