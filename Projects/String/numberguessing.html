@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: beige;
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            background-color: red;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Number Guessing Game</h1>
+        <div class="layout">
+            <input type="text" id="userinput" placeholder="Enter Difficulty (e.g., 10)">
+            <input type="text" id="guess" placeholder="Guess the number">
+            <button type="submit" id="sub">Check It</button>
+            <div class="result">Enter your guess...</div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("sub").addEventListener("click", function func() {
+            const difficulty = Number(document.getElementById("userinput").value);
+            const guess = Number(document.getElementById("guess").value);
+            const random = Math.floor(Math.random() * difficulty) + 1;
+            const resultDiv = document.querySelector(".result");
+
+            if (isNaN(difficulty) || difficulty <= 0) {
+                resultDiv.innerHTML = "Invalid difficulty! Enter a number.";
+                resultDiv.style.backgroundColor = "orange";
+                return;
+            }
+
+            if (isNaN(guess)) {
+                resultDiv.innerHTML = "Invalid guess! Enter a number.";
+                resultDiv.style.backgroundColor = "orange";
+                return;
+            }
+
+            if (random === guess) {
+                resultDiv.innerHTML = `🎉 Correct! The number was ${random}`;
+                resultDiv.style.backgroundColor = "green";
+            } else {
+                resultDiv.innerHTML = `❌ Incorrect! The number was ${random}`;
+                resultDiv.style.backgroundColor = "red";
+            }
+        });
+    </script>
+</body>
+</html>
