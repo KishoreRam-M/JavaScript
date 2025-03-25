@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorFlipper</title>
+    <style>
+        .container {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #heading {
+            align-self: flex-start;
+        }
+
+        #clickme {
+            align-self: center;
+            position: relative;
+            top: 50px;
+            height: 100px;
+            width: 200px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #c {
+            align-self: flex-end;
+            position: relative;
+            bottom: 30px;
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">ColorFlipper</h1>
+        <h1 id="c">#FFFFFF</h1>
+        <button id="clickme">Click Me</button>
+    </div>
+    <script>
+        let btn=document.getElementById("clickme").addEventListener("click",colorchange);
+        let box= document.getElementsByClassName("container");
+        let heading=document.getElementById("heading");
+        let  colorname=document.getElementById("c");
+        function hexcolor()
+        {
+let hex="#";
+let hexno="123456789ABCDEF";
+
+for(let i=0;i<6;i++)
+{
+    hex+=hexno[Math.floor(Math.random()*16)];
+   
+    
+}
+return hex;
+
+        }
+
+        function colorchange()
+        {
+
+            let colorr=hexcolor();
+document.body.style.backgroundColor   =colorr;  
+colorname.textContent=colorr;
+
+
+
+
+
+}
+        
+    </script>
+
+    
+</body>
+</html>

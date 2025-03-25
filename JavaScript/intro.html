@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte & Chew - Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function showMenu() {
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function showLocations() {
+            document.getElementById("locations").style.display = "block";
+        }
+
+        function deployMeal() {
+            showMenu();
+            showLocations();
+            alert("Thank You! 😊");
+        }
+    </script>
+</head>
+<body>
+    <div class="landing">
+        <div class="maintext">
+            <header>
+               <h1 class="logo"><a href="#">Byte&Chew</a></h1> 
+               <h1 class="menu"> <a href="javascript:void(0);" onclick="showMenu()">Menu</a> </h1>
+               <h1 class="location"><a href="javascript:void(0);" onclick="showLocations()">Location</a></h1>
+            </header>
+            <div class="text">
+                <div class="tagline1">Savor Every Byte, Deploy Every Flavor!</div>
+                <div class="tagline2">Refuel. Debug. Deploy. Repeat.</div>
+                <div class="callus">📞 (+65) 404-GIT-FORK</div>
+            </div>
+            
+            <div>
+                <button onclick="deployMeal()">Deploy Meal</button>
+            </div>
+        </div>
+
+        <!-- Menu Section -->
+        <section id="menu" style="display: none;">
+            <h2>🍽️ Menu</h2>
+            <ul>
+                <li>🍛 Idli & Sambar</li>
+                <li>🍲 Dosa & Chutney</li>
+                <li>🍚 Chettinad Curry Rice</li>
+                <li>🍖 Country Chicken Biryani</li>
+                <li>🥘 Lentil Rice & Potato Fry</li>
+                <li>🍧 Jigarthanda</li>
+                <li>☕ Filter Coffee</li>
+            </ul>
+        </section>
+
+        <!-- Locations Section -->
+        <section id="locations" style="display: none;">
+            <h2>📍 Locations</h2>
+            <ul>
+                <li>🏠 Chennai - Anna Salai</li>
+                <li>🏠 Coimbatore - Race Course</li>
+                <li>🏠 Madurai - Near Meenakshi Temple</li>
+                <li>🏠 Trichy - Gandhi Market</li>
+                <li>🏠 Erode - Near Pennaiyar River</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Calculate the word</title>
+    <style>
+      body{
+        background-color: beige;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+
+      }
+      .container{
+        background-color: black;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+     position :absolute;
+     left: 700px;
+     top: 200px;
+       height: 400px;
+       width: 500px;
+      }
+   button{
+    position: relative;
+    top: 50px;
+    height: 30px;
+    width: 200px;
+    background-color: blueviolet;
+   }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Type a Sentence </h1>
+        <textarea rows="10" cols="50" id="area"></textarea>
+        <button type="submit" id="Calculate"> Calculate Words</button>
+        <div class="result" id="r"></div>
+    </div>
+    <script>
+        document.getElementById("Calculate").addEventListener("click",func);
+        function func()
+        {
+            let input=document.getElementById("area").value.trim();
+            let words=input.split(/\s+/).length;
+            let char=input.replace(/\s+/g,"").length;
+
+            document.getElementById("r").innerHTML= "total words in paragraph :"+words+ "total character in the paragraph :"+char;
+        }
+    </script>
+</body>
+</html>

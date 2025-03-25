@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM to Inches Converter</title>
+
+    <style>
+        body {
+            background-color: #ecec75;
+        }
+        .container {
+            background-color: black;
+            color: antiquewhite;
+            width: 700px;
+            height: 700px;
+            position: relative;
+            top: 100px;
+            left: 600px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .inputdiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            width: 200px;
+            height: 40px;
+            background-color: #ecec75;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #uinput {
+            height: 35px;
+            width: 300px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        #result {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CM to Inches Converter</h1>
+        <div class="inputdiv">
+            <input type="text" placeholder="Enter the CM value" id="uinput">
+            <button id="ubutton">Convert to Inches</button>
+        </div>
+<div id="result"></div>    </div>
+
+    <script>
+      document.getElementById("ubutton").addEventListener("click",fun);
+function fun()
+{
+    let input=document.getElementById("uinput").value;
+    let inches= Number(input)/2.54;
+    document.getElementById("result").innerHTML=inches;
+
+
+}
+
+
+    </script>
+    
+</body>
+</html>

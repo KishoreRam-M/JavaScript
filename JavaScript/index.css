@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+}
+
+.logo a, .menu a, .location a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a:hover, .menu a:hover, .location a:hover {
+    color: gold;
+}
+
+/* Main Text */
+.text {
+    margin-top: 100px;
+    font-size: 1.8rem;
+}
+
+.tagline1 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.8);
+}
+
+.tagline2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* Call Us */
+.callus {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: lightgray;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: orange;
+}
+
+/* Menu & Locations Sections */
+section {
+    display: none;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+h2 {
+    color: gold;
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}

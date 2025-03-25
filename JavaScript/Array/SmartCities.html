@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            background-color: black;
+            color: white;
+            height: 300px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        select {
+            background-color: blueviolet;
+            color: white;
+            padding: 010px;
+            border-radius: 5px;
+        }
+        .fact {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <label for="selectcities">Select a City to Know Interesting Facts:</label>
+        <select id="selectcities">
+            <option value="" disabled selected>Select a city</option>
+            <option value="chennai">Chennai</option>
+            <option value="Kadayanallur">Kadayanallur</option>
+            <option value="Tenkasi">Tenkasi</option>
+            <option value="Mathalamparai">Mathalamparai</option>
+        </select>
+        <div class="fact" id="factDisplay"></div>
+    </div>
+    <script>
+        document.getElementById("selectcities").addEventListener("change",func)
+        function func (){
+let selectedcities=this.value;
+let facr="";
+switch(selectedcities)
+{
+    case "chennai":
+        fact="I love Chennai";
+       break;
+    case "kadayanallur":
+        fact="i love Kadayanallur";
+        break;    
+        case "Tenkasi":
+
+        fact="i love tenkasi";
+        break;
+
+
+        case "Mathalamparai":
+            fact="i love you";
+            break;
+            default:
+                fact=" fuck yyoiu";
+    }
+
+    document.getElementById("factDisplay").innerHTML=fact;
+
+        }
+    </script>
+</body>
+</html>

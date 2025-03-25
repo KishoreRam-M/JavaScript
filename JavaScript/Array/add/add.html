@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add the Department</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        background-color: silver;
+        align-items: center;
+        justify-content: center;
+        color: darkred;
+        width: 500px;
+        height: 600px;
+
+
+    }
+
+    h1{
+    
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h1>Summa Oru Program</h1>
+        <label for="">Choose your Department</label>
+     <select name="Department" id="Department">
+        <option value="Cse">Computer Science Engineering</option>
+        <option value="EEE">Electric Electrical Engineering</option>
+        <option value="ECE
+        ">Electric Electronic Engineering</option>
+     </select>
+     <div id="result">
+
+     </div>
+    </div>
+<script>
+    document.getElementById("Department").addEventListener("change",add);
+    let  result=document.getElementById("result");
+    
+    let arr=[];
+    function add()
+    {
+        let input=document.getElementById("Department").value
+arr.push(input);
+result.innerHTML = "Selected Departments: " + arr.join(", "); 
+    }
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
